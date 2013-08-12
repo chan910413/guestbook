@@ -559,3 +559,372 @@ Rendering template within layouts/messages
 Rendering messages/index
 DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/chan/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
 Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/messages?page=1]
+DEPRECATION WARNING: Kernel#returning has been deprecated in favor of Object#tap. (called from enable_activerecord at /var/lib/gems/1.8/gems/mislav-will_paginate-2.3.11/lib/will_paginate.rb:39)
+  [4;36;1mSQL (18.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (107.6ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (68.7ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMessages (20130812080614)
+  [4;36;1mSQL (4.7ms)[0m   [0;1mCREATE TABLE `messages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `website_url` varchar(255), `body` text, `create_at` datetime, `title` varchar(255), `reply` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (29.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20130812080614')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `messages`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `messages`[0m
+DEPRECATION WARNING: Kernel#returning has been deprecated in favor of Object#tap. (called from enable_activerecord at /var/lib/gems/1.8/gems/mislav-will_paginate-2.3.11/lib/will_paginate.rb:39)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:52:50) [GET]
+  [4;36;1mMessage Load (31.2ms)[0m   [0;1mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+Rendering template within layouts/messages
+Rendering messages/index
+Completed in 111ms (View: 73, DB: 31) | 200 OK [http://localhost/messages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2013-08-12 21:52:54) [GET]
+  [4;35;1mMessage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 50ms (View: 44, DB: 1) | 200 OK [http://localhost/messages/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2013-08-12 21:53:06) [POST]
+  Parameters: {"message"=>{"website_url"=>"test", "reply"=>"test", "title"=>"test", "name"=>"test", "create_at(2i)"=>"8", "create_at(1i)"=>"2013", "body"=>"test", "create_at(5i)"=>"52", "create_at(4i)"=>"13", "create_at(3i)"=>"12"}, "authenticity_token"=>"3fV+yXCdOMVBBhV8au2B42X4PCKVcbmZlQar2tR3IGs=", "commit"=>"Create"}
+  [4;36;1mMessage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMessage Create (17.8ms)[0m   [0;1mINSERT INTO `messages` (`website_url`, `reply`, `title`, `name`, `updated_at`, `body`, `create_at`, `created_at`) VALUES('test', 'test', 'test', 'test', '2013-08-12 13:53:06', 'test', '2013-08-12 13:52:00', '2013-08-12 13:53:06')[0m
+  [4;35;1mSQL (15.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/messages/1
+Completed in 44ms (DB: 35) | 302 Found [http://localhost/messages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#show (for 127.0.0.1 at 2013-08-12 21:53:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMessage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (24.6ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 1) [0m
+Rendering template within layouts/messages
+Rendering messages/show
+Completed in 42ms (View: 9, DB: 26) | 200 OK [http://localhost/messages/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:53:07) [GET]
+  [4;36;1mMessage Load (0.4ms)[0m   [0;1mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;35;1mMessage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/messages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2013-08-12 21:53:10) [GET]
+  [4;36;1mMessage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 144ms (View: 139, DB: 1) | 200 OK [http://localhost/messages/new]
+  [4;35;1mSQL (0.7ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2013-08-12 21:53:30) [POST]
+  Parameters: {"message"=>{"website_url"=>"test1", "reply"=>"test1", "title"=>"test1", "name"=>"test1", "create_at(2i)"=>"8", "create_at(1i)"=>"2013", "body"=>"test1", "create_at(5i)"=>"53", "create_at(4i)"=>"13", "create_at(3i)"=>"12"}, "authenticity_token"=>"3fV+yXCdOMVBBhV8au2B42X4PCKVcbmZlQar2tR3IGs=", "commit"=>"Create"}
+  [4;35;1mMessage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMessage Create (0.4ms)[0m   [0mINSERT INTO `messages` (`website_url`, `reply`, `title`, `name`, `updated_at`, `body`, `create_at`, `created_at`) VALUES('test1', 'test1', 'test1', 'test1', '2013-08-12 13:53:30', 'test1', '2013-08-12 13:53:00', '2013-08-12 13:53:30')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/messages/2
+Completed in 13ms (DB: 4) | 302 Found [http://localhost/messages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#show (for 127.0.0.1 at 2013-08-12 21:53:30) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mMessage Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mMessage Load (1.7ms)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.`id` = 2) [0m
+Rendering template within layouts/messages
+Rendering messages/show
+Completed in 17ms (View: 4, DB: 3) | 200 OK [http://localhost/messages/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:53:32) [GET]
+  [4;35;1mMessage Load (0.4ms)[0m   [0mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;36;1mMessage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+Completed in 18ms (View: 11, DB: 2) | 200 OK [http://localhost/messages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2013-08-12 21:53:34) [GET]
+  [4;35;1mMessage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 24ms (View: 19, DB: 1) | 200 OK [http://localhost/messages/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2013-08-12 21:53:46) [POST]
+  Parameters: {"message"=>{"website_url"=>"test2", "reply"=>"test2", "title"=>"test2", "name"=>"test2", "create_at(2i)"=>"8", "create_at(1i)"=>"2013", "body"=>"test2", "create_at(5i)"=>"53", "create_at(4i)"=>"13", "create_at(3i)"=>"12"}, "authenticity_token"=>"3fV+yXCdOMVBBhV8au2B42X4PCKVcbmZlQar2tR3IGs=", "commit"=>"Create"}
+  [4;36;1mMessage Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMessage Create (0.4ms)[0m   [0;1mINSERT INTO `messages` (`website_url`, `reply`, `title`, `name`, `updated_at`, `body`, `create_at`, `created_at`) VALUES('test2', 'test2', 'test2', 'test2', '2013-08-12 13:53:46', 'test2', '2013-08-12 13:53:00', '2013-08-12 13:53:46')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/messages/3
+Completed in 13ms (DB: 3) | 302 Found [http://localhost/messages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#show (for 127.0.0.1 at 2013-08-12 21:53:46) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mMessage Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (0.3ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 3) [0m
+Rendering template within layouts/messages
+Rendering messages/show
+Completed in 16ms (View: 3, DB: 1) | 200 OK [http://localhost/messages/3]
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:53:48) [GET]
+  [4;36;1mMessage Load (0.4ms)[0m   [0;1mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;35;1mMessage Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/messages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2013-08-12 21:53:49) [GET]
+  [4;35;1mMessage Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 31ms (View: 25, DB: 1) | 200 OK [http://localhost/messages/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2013-08-12 21:54:01) [POST]
+  Parameters: {"message"=>{"website_url"=>"test3", "reply"=>"test3", "title"=>"test3", "name"=>"test3", "create_at(2i)"=>"8", "create_at(1i)"=>"2013", "body"=>"test3", "create_at(5i)"=>"53", "create_at(4i)"=>"13", "create_at(3i)"=>"12"}, "authenticity_token"=>"3fV+yXCdOMVBBhV8au2B42X4PCKVcbmZlQar2tR3IGs=", "commit"=>"Create"}
+  [4;36;1mMessage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMessage Create (0.4ms)[0m   [0;1mINSERT INTO `messages` (`website_url`, `reply`, `title`, `name`, `updated_at`, `body`, `create_at`, `created_at`) VALUES('test3', 'test3', 'test3', 'test3', '2013-08-12 13:54:01', 'test3', '2013-08-12 13:53:00', '2013-08-12 13:54:01')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/messages/4
+Completed in 13ms (DB: 2) | 302 Found [http://localhost/messages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#show (for 127.0.0.1 at 2013-08-12 21:54:01) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mMessage Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (0.3ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 4) [0m
+Rendering template within layouts/messages
+Rendering messages/show
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://localhost/messages/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:54:04) [GET]
+  [4;36;1mMessage Load (0.8ms)[0m   [0;1mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;35;1mMessage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/administrator/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 21ms (View: 14, DB: 3) | 200 OK [http://localhost/messages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:54:08) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mMessage Load (0.4ms)[0m   [0mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 3, 3[0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;36;1mMessage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/administrator/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/messages?page=2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:54:10) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mMessage Load (0.1ms)[0m   [0mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;36;1mMessage Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/administrator/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 101ms (View: 93, DB: 1) | 200 OK [http://localhost/messages?page=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:54:43) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mMessage Load (0.1ms)[0m   [0;1mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 3, 3[0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;35;1mMessage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/administrator/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/messages?page=2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:54:45) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mMessage Load (0.1ms)[0m   [0;1mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;35;1mMessage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/administrator/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 22ms (View: 15, DB: 2) | 200 OK [http://localhost/messages?page=1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:54:46) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mMessage Load (0.1ms)[0m   [0mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 3, 3[0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;36;1mMessage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/administrator/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/messages?page=2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:54:47) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mMessage Load (0.1ms)[0m   [0mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;36;1mMessage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/administrator/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/messages?page=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:54:48) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mMessage Load (0.1ms)[0m   [0;1mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 3, 3[0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;35;1mMessage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/administrator/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/messages?page=2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:54:49) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mMessage Load (0.1ms)[0m   [0;1mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;35;1mMessage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/administrator/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 31ms (View: 24, DB: 2) | 200 OK [http://localhost/messages?page=1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:54:52) [GET]
+  Parameters: {"page"=>"3"}
+  [4;35;1mMessage Load (0.4ms)[0m   [0mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 6, 3[0m
+  [4;36;1mMessage Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/administrator/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/messages?page=3]
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:55:03) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mMessage Load (0.1ms)[0m   [0;1mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 3, 3[0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;35;1mMessage Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/administrator/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 14ms (View: 8, DB: 3) | 200 OK [http://localhost/messages?page=2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#show (for 127.0.0.1 at 2013-08-12 21:55:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMessage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (0.4ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 1) [0m
+Rendering template within layouts/messages
+Rendering messages/show
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/messages/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2013-08-12 21:55:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMessage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (0.1ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 1) [0m
+Rendering template within layouts/messages
+Rendering messages/edit
+Completed in 33ms (View: 27, DB: 1) | 200 OK [http://localhost/messages/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#show (for 127.0.0.1 at 2013-08-12 21:55:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMessage Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (0.1ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 1) [0m
+Rendering template within layouts/messages
+Rendering messages/show
+Completed in 10ms (View: 3, DB: 2) | 200 OK [http://localhost/messages/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 21:55:58) [GET]
+  [4;36;1mMessage Load (0.1ms)[0m   [0;1mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;35;1mMessage Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/administrator/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/messages]
