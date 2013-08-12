@@ -428,3 +428,134 @@ Rendering template within layouts/messages
 Rendering messages/index
 DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/chan/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
 Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/messages?page=1]
+DEPRECATION WARNING: Kernel#returning has been deprecated in favor of Object#tap. (called from enable_activerecord at /var/lib/gems/1.8/gems/mislav-will_paginate-2.3.11/lib/will_paginate.rb:39)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 16:45:31) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mMessage Load (0.2ms)[0m   [0;1mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;35;1mMessage Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/chan/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 65ms (View: 59, DB: 1) | 200 OK [http://localhost/messages?page=1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 16:45:33) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mMessage Load (0.1ms)[0m   [0mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;36;1mMessage Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/chan/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/messages?page=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 16:45:34) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mMessage Load (0.2ms)[0m   [0;1mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;35;1mMessage Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/chan/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/messages?page=1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 16:45:34) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mMessage Load (0.2ms)[0m   [0mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;36;1mMessage Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/chan/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/messages?page=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 16:45:34) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mMessage Load (0.1ms)[0m   [0;1mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;35;1mMessage Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/chan/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/messages?page=1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 16:45:34) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mMessage Load (0.1ms)[0m   [0mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;36;1mMessage Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/chan/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 57ms (View: 9, DB: 1) | 200 OK [http://localhost/messages?page=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 16:45:34) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mMessage Load (0.2ms)[0m   [0;1mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;35;1mMessage Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/chan/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/messages?page=1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 16:45:34) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mMessage Load (0.1ms)[0m   [0mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;36;1mMessage Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/chan/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/messages?page=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 16:45:35) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mMessage Load (0.1ms)[0m   [0;1mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;35;1mMessage Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/chan/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/messages?page=1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2013-08-12 16:45:35) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mMessage Load (0.1ms)[0m   [0mSELECT * FROM `messages` ORDER BY create_at DESC LIMIT 0, 3[0m
+  [4;36;1mMessage Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47messages47index46html46erb at /home/chan/workspace/rails/guestbook/app/views/messages/index.html.erb:29)
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/messages?page=1]
