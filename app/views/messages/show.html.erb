@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%=h @message.name %>
+</p>
+
+<p>
+  <b>Website url:</b>
+  <%=h @message.website_url %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @message.body %>
+</p>
+
+<p>
+  <b>Create at:</b>
+  <%=h @message.create_at %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @message.title %>
+</p>
+
+<p>
+  <b>Reply:</b>
+  <%=h @message.reply %>
+</p>
+
+
+<%= link_to 'Edit', edit_message_path(@message) %> |
+<%= link_to 'Back', messages_path %>
